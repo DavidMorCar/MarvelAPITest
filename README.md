@@ -6,7 +6,7 @@ Before you begin, please review the following prerequisites and documentation: h
 Set the keys for consuming the Marvel API in Constants.kt
 * Add the BASE_URL, hash, ts and public key to use the app.
 ```kotlin
-	const val PUBLIC_CREDENTIALS = ""
+    const val PUBLIC_CREDENTIALS = ""
     const val HASH = ""
     const val TS = ""
     const val ORDER = "title"
@@ -17,7 +17,7 @@ Set the keys for consuming the Marvel API in Constants.kt
 
 * Dependencies on gradle.build file.
 ```kotlin
-	// Kotlin and Android dependencies
+    // Kotlin and Android dependencies
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     // Life cycle and architecture components dependencies
