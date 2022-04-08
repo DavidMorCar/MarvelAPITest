@@ -71,9 +71,9 @@ In the class UtilTest you can find two basic unit tests using Google Truth, test
 ```
 
 ## User Experience
-![marveltest](marveltest.jpg)
-![marveltest1](marveltest1.jpg)
+![marveltest](marveltest.png)
+![marveltest1](marveltest1.png)
 
 ## Legal
 The use of the API and any related documentation is governed by and must be used in accordance with the Terms and Conditions of Use of © 2022 MARVEL, which may be found at: https://developer.marvel.com/.
-The application code and usage rights also belong to David Antonio Moreno.
+The application code usage rights belong to David Antonio Moreno.
