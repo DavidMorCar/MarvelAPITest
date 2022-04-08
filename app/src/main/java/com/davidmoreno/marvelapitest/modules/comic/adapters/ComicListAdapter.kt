@@ -47,6 +47,9 @@ class ComicListAdapter : RecyclerView.Adapter<ComicListAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.nameTV.text = (comics?.get(position)?.title)
         holder.nameTV.text.trim()
+        holder.descriptionTV.text = (comics?.get(position)?.description)
+        if((comics?.get(position)?.description).isNullOrEmpty())
+            holder.descriptionTV.text = context?.getString(R.string.no_description_message)
         val url = getCorrectImageURL(
             comics!![position].image[0].path,
             comics!![position].image[0].extension
@@ -71,5 +74,6 @@ class ComicListAdapter : RecyclerView.Adapter<ComicListAdapter.ViewHolder>() {
         val view: View = mView
         val nameTV: TextView = mView.findViewById(R.id.itemComicNameTV)
         val imageView: ImageView = mView.findViewById(R.id.itemComicIV)
+        val descriptionTV: TextView = mView.findViewById(R.id.itemComicDescriptionTV)
     }
 }

@@ -8,4 +8,5 @@
     <string name="comic_image">Comic Image</string>
     <string name="marvel_rights">© 2022 MARVEL</string>
     <string name="error">Error loading data…</string>
+    <string name="no_description_message">Description not available</string>
 </resources>

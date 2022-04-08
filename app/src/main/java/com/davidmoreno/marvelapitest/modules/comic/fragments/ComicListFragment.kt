@@ -31,6 +31,7 @@ class ComicListFragment : BaseFragment() {
     /** View attributes */
     private lateinit var comicRV: RecyclerView
     private lateinit var comicView: View
+    private lateinit var marvelView: View
     private lateinit var errorTV: TextView
 
     /** RecycleView and Adapter init */
@@ -92,6 +93,10 @@ class ComicListFragment : BaseFragment() {
         comicView = requireActivity().findViewById(R.id.comicListView)
         comicView.setOnClickListener {
             openURL("https://www.linkedin.com/in/david-moreno-533bb5155/", requireActivity())
+        }
+        marvelView = requireActivity().findViewById(R.id.comicMarvelView)
+        marvelView.setOnClickListener {
+            openURL("https://developer.marvel.com/", requireActivity())
         }
         errorTV = requireActivity().findViewById(R.id.comicErrorTV)
     }

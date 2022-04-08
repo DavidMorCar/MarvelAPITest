@@ -4,57 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/purple_200"
     tools:context=".modules.comic.fragments.ComicListFragment">
+
+    <View
+        android:id="@+id/comicListView"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/border_comic_item"
+        app:layout_constraintBottom_toBottomOf="@+id/comicMarvelTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/comicUserTV"
+        app:layout_constraintTop_toTopOf="@+id/comicMarvelTV" />
 
     <ImageView
         android:id="@+id/comicListIV"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_margin="20dp"
+        android:layout_margin="23dp"
         android:contentDescription="@string/user_icon"
-        android:rotation="180"
-        android:src="@drawable/ic_splash"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/ic_white_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/comicMarvelView"
+        android:layout_width="130sp"
+        android:layout_height="40sp"
+        android:background="@drawable/border_comic_item"
+        app:layout_constraintBottom_toBottomOf="@+id/comicMarvelTV"
+        app:layout_constraintEnd_toEndOf="@id/comicMarvelTV"
+        app:layout_constraintStart_toStartOf="@id/comicMarvelTV"
+        app:layout_constraintTop_toTopOf="@+id/comicMarvelTV" />
 
     <TextView
+        android:id="@+id/comicMarvelTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
         android:text="@string/marvel_rights"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/marvel_yellow"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/comicListIV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/comicListIV" />
 
     <TextView
         android:id="@+id/comicUserTV"
-        android:layout_width="0dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginEnd="10dp"
+        android:maxLines="1"
         android:text="@string/user"
-        android:textAlignment="textStart"
+        android:textAlignment="textEnd"
         android:textAllCaps="false"
-        android:textColor="@color/purple_500"
+        android:textColor="?attr/colorOnPrimarySurface"
         android:textSize="15sp"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toBottomOf="@+id/comicListIV"
         app:layout_constraintEnd_toStartOf="@id/comicListIV"
         app:layout_constraintTop_toTopOf="@+id/comicListIV" />
-
-    <View
-        android:id="@+id/comicListView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/comicListRV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/comicUserTV"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/comicErrorTV"
@@ -78,8 +92,9 @@
         android:id="@+id/comicListRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comicUserTV" />
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_pane"
+        app:layout_constraintBottom_toTopOf="@+id/comicListIV"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
